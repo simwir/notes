@@ -1,0 +1,27 @@
+\textit{CLRS appendix A page 1145}
+
+\subsection{Linearitet}
+For any real number $ c $ and any finite sequences $ a_1,a_2,\ldots,a_n $ and $ b_1,b_2,\ldots,b_n $,
+$$ \sum_{k=1}^{n}\left( ca_k+b_k\right) = c \sum_{k=1}^{n}a_k + \sum_{k=1}^{n}b_k. $$
+
+\subsection{Arithmetic series}
+The summation
+$$ \sum_{k=1}^{n}k = 1+2+\cdots+n $$
+is an \textbf{\textit{arithmetic series}} and has the value
+\begin{align*}
+\sum_{k=1}^{n}k &= \dfrac{1}{2}n(n+1)\\
+&= \Theta\left( n^2\right) .
+\end{align*}
+
+\subsection{Sums of squares and cubes}'
+We have the following summations of squares and qubes:
+\begin{align*}
+\sum_{k=0}^{n}k^2&=\dfrac{n(n+1)(2n+1)}{6}\\
+\sum_{k=0}^{n}k^3&=\dfrac{n^2(n+1)^2}{4}.
+\end{align*}
+
+\subsection{Geometric series}
+For real $ x \neq 1 $, the summation
+$$ \sum_{k=0}^{n}x^k = 1+x+x^2+\cdots+x^n $$
+is a \textit{\textbf{geometric}} or \textbf{\textit{exponential series}} and has the value
+$$ \sum_{k=0}^{n}x^k = \dfrac{x^{n+1}-1}{x-1} $$

@@ -1,0 +1,22 @@
+\begin{tabularx}{\linewidth}{lXXX}
+	\toprule
+	               & \textbf{Worst case run time} & \textbf{Average case run time} & \textbf{In place or not?}      \\ \midrule
+	Merge Sort     & \nlgn                        & \nlgn                          & No. $ \Theta(n) $.             \\
+	Insertion Sort & \nn                          & \nn                            & Yes. $ \Theta(1) $ additional. \\
+	Bubble Sort    & \nn                          & \nn                            & Yes.                           \\
+	Selection Sort & \nn                          & \nn                            & Yes.                           \\
+	Quick Sort     & \nn                          & \nlgn                          & Yes.                           \\
+	Heap Sort      & \nlgn                        & \nlgn                          & Yes.                           \\ \bottomrule
+\end{tabularx}
+
+\subsection{Behavior of sorting algorithms}
+
+\begin{description}
+	\item[Merge sort] (CLRS p.29-34) Divide-and-conquer. Recursively split list into two sublists of equal size, then merge the sorted sublists by comparing the front elements and taking the smallest until both lists are empty. 
+	\item[Insertion sort] (CLRS p.17-18) Runs through the list, and places the $j$th element in the correct place out of the sublist $A[1..j-1]$, the already sorted elements. 
+	\item[Bubble sort] (CLRS p.40, Problem 2-2) Sorts by repeatedly looping through the list, swapping out of order elements. The bigger elements slowly "bubble" upwards. 
+	\item[Selection sort] (CLRS p.29, Exercise 2.2-2) Runs through the list and takes the smallest unsorted element and places it in front of the array. 
+	\item[Quick sort] (CLRS Chapter 7, p.170 onwards) Takes some pivot element $x$ from a place in the list, and places all elements smaller than $x$ to the left of $x$, and all elements bigger to the right. Then it recursively quicksorts the sublists of elements smaller than $x$ and bigger than $x$.
+	\item[Heap sort] (CLRS Chapter 6, p.151 onwards) Constructs a max heap out of the array. Then it repeatedly exchanges the maximum element with the last element in the heap, then heapifies again. 
+	\subitem \textsc{Max-Heapify}(i): Assuming that the trees at \textsc{Left}(i) and \textsc{Right}(i) are heaps, make the tree rooted at $i$ a heap. 
+\end{description}

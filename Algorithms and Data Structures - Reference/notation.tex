@@ -1,0 +1,55 @@
+\textit{CLRS section 3.2 p. 53}
+\subsection{Monotonicity}
+A function $ f(n) $ is
+\begin{description}
+    \item[monotonically increasing] if $ m \leq n $ implies $ f(m) \leq f(n) $.
+    \item[monotonically decreasing] if $ m \leq n $ implies $ f(m) \geq f(n) $.
+    \item[strictly increasing] if $ m < n $ implies $ f(m) < f(n) $.
+    \item[strictly decreasing] if $ m < n $ implies $ f(m) > f(n) $.
+\end{description}
+
+\subsection{Exponentials}
+For all real $ a > 0$, $ b > 0 $, $ m $, and $ n $, we have the following identities:\\
+\begin{align*}
+a^0 &= 1\\
+a^1 &= a\\
+a^{-1} &= \frac{1}{a}\\
+\left( a^m\right) ^n &= a^{nm}\\
+\left( a^m\right) ^n &= \left( a^n\right) ^m\\
+a^ma^n &= a^{n+m}\\
+0^0&=1\\
+a^mb^m&=(ab)^m\\
+a^\frac{m}{n} &= \left( \sqrt[n]{a}\right) ^m\\
+a^{-m}&=\dfrac{1}{a^m}\\
+a^{m-n}&=\dfrac{a^m}{a^n}
+\end{align*}
+\subsection{Logarithms}
+\emph{Logarithm functions apply only to the next term in the formula}, so that $ \lg n + k $ will mean $ \left( \lg n\right) +k $ and not $ \lg(n+k) $.
+CLRS uses the following notations:
+\begin{align*}
+\lg n &= \log_2 n &\text{(binary logarithm)}\\
+\ln n &= \log_e n &\text{(natural logarithm)}\\
+\lg^kn &= (\lg n)^k &\text{(exponentiation)}\\
+\lg\lg n &= \lg (\lg n) &\text{(composition)}
+\end{align*}
+For all real $ a > 0 $, $ b > 0 $, $ c > 0 $, and $ n $,
+\begin{align*}
+a &= b^{\log_ba}\\
+\log_c(ab) &= \log_ca+\log_cb\\
+\log_ba^n &= n\log_ba\\
+\log_ba &= \dfrac{\log_ca}{\log_cb}\\
+\log_b\left( \frac{1}{a}\right) &= -\log_ba\\
+\log_ba &= \dfrac{1}{\log_ab}\\
+a^{\log_bc}&=c^{\log_ba}\\
+\log_b 1 &= 0\\
+\log_bb &= 1\\
+\log_b\left( \frac{a}{c}\right) &= \log_b a - \log_b c
+\end{align*}
+where, in each equation above, logarithm bases are not 1.\\
+
+There is a simple series expansion for $ \ln (1+x) $ when $ |x| < 1 $:
+$$ \ln(1+x) = x - \dfrac{x^2}{2} + \dfrac{x^3}{3} - \dfrac{x^4}{4} + \dfrac{x^5}{5} - \cdots $$
+
+We also have the following inequalities for $ x > -1 $:
+$$ \dfrac{x}{1+x} \leq \ln(1+x) \leq x $$
+where equality holds only for $ x = 0 $.

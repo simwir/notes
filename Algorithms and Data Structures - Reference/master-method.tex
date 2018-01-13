@@ -1,0 +1,22 @@
+\textit{CLRS section 4.5 p. 93}
+Let $ a \ge 1 $ and $ b > 1 $ be constants, let $ f(n) $ be a function, and let $ T(n) $ be defined on the nonnegative integers by the recurrence
+$$ T(n) = aT\left( \frac{n}{b}\right) + f(n), $$
+where we interpret $ \frac{n}{b} $ to mean either $ \lfloor \frac{n}{b}\rfloor $ or $ \lceil\frac{n}{b} \rceil$.
+Then $ T(n) $ has the following asymptotic bounds:
+\begin{enumerate}
+    \item If $ f(n)=O\left( n^{\log_ba-\epsilon} \right) $ for some constant $ \epsilon > 0 $, then $ T(n)=\Theta\left( n^{\log_ba}\right)$.
+    \item If $ f(n)=\Theta\left( n^{\log_ba}\right) $, then $ T(n)=\Theta\left( n^{log_ba}\lg n\right)  $.
+    \item If $ f(n)=\Omega\left( n^{\log_ba+\epsilon}\right)  $ for some constant $ \epsilon > 0 $, and if $ af\left( \frac{n}{b}\right) \leq cf(n) $ for some constant $  c < 1 $ and all sufficiently large $ n $, then $ T(n)=\Theta(f(n)) $.
+\end{enumerate}
+\subsection{Using the master method}
+\begin{enumerate}
+    \item Determine if the recurrence is on the form $ T(n) = aT\left( \frac{n}{b}\right) + f(n) $.
+    \item Extract $ a $, $ b $, and $ f(n) $ from the recurrence.
+    \item Determine $ n^{\log_b a} $.
+    \item Compare $ f(n) $ and $ n^{\log_b a} $ asymptotically.
+    \begin{enumerate}
+        \item If $ f(n) $ increases polynomially slower then $ T(n)=\Theta\left( n^{\log_ba}\right)$.
+        \item If $ f(n) $ increases similarly then $ T(n)=\Theta\left( n^{log_ba}\lg n\right)  $.
+        \item If $ f(n) $ increases polynomially faster and if $ af\left( \frac{n}{b}\right) \leq cf(n) $ for some constant $  c < 1 $ and all sufficiently large $ n $, then $ T(n)=\Theta(f(n)) $.
+    \end{enumerate}
+\end{enumerate}

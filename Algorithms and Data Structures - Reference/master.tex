@@ -1,0 +1,40 @@
+\documentclass[10pt,a4paper,oneside]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\graphicspath{{figures/}}
+\newcommand\nlgn{$ \Theta(n\lg n) $}
+\newcommand\nn{$ \Theta(n^2) $}
+\def\c{$ \Theta(1) $}
+\newcommand\n{$ \Theta(n) $}
+\newcommand\lgn{$ \Theta(\lg n) $}
+\author{Simon Virenfeldt}
+\title{Algorithms and Data Structures - Reference}
+\date{2017\\September - January}
+\begin{document}
+    \maketitle
+    \section{Standard notation and common functions}
+    \input{notation.tex}
+    \section{The master method}
+    \input{master-method.tex}
+    \section{Summations}
+    \input{summations.tex}
+    \section{Asymptotic notation}
+    \input{asymptotic.tex}
+    \section{Loop invariants}
+    \input{loop-invariants.tex}
+    \section{Sorting algorithms}
+    \input{sorting.tex}
+    \section{Abstract data types}
+    \input{adt.tex}
+    \section{Tree walks}
+    \input{tree-walk.tex}
+    \section{Fractions identities}
+    \input{fractions.tex}
+    \section{Root identities}
+    \input{root.tex}
+\end{document}

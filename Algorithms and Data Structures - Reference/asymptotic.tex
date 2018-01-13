@@ -1,0 +1,38 @@
+\subsection{Comparing functions}
+\textit{CLRS section 3.1 page 51}
+For the following, assume that $ f(n) $ and $ g(n) $ are asymptotically positive.
+\subsubsection{Transitivity}
+\begin{alignat*}{11}
+	&f(n) &&= \Theta(g(n)) &\quad\text{and}\quad g(n) &&= \Theta(h(n)) &\quad\text{imply}\quad f(n) &&= \Theta(h(n))\\
+	&f(n) &&= O(g(n)) 	&\quad\text{and}\quad g(n) &&= O(h(n)) &\quad\text{imply}\quad f(n) &&= O(h(n))\\
+	&f(n) &&= \Omega(g(n)) 	&\quad\text{and}\quad g(n) &&= \Omega(h(n)) &\quad\text{imply}\quad f(n) &&= \Omega(h(n))\\
+	&f(n) &&= o(g(n)) 	&\quad\text{and}\quad g(n) &&= o(h(n)) &\quad\text{imply}\quad f(n) &&= o(h(n))\\
+	&f(n) &&= \omega(g(n)) 	&\quad\text{and}\quad g(n) &&= \omega(h(n)) &\quad\text{imply}\quad f(n) &&= \omega(h(n))
+\end{alignat*}
+
+\subsubsection{Reflexivity}
+\begin{align*}
+	f(n) &= \Theta(f(n))\\
+	f(n) &= O(f(n))\\
+	f(n) &= \Omega(f(n))
+\end{align*}
+
+\subsubsection{Symmetry}
+$$ f(n)=\Theta(g(n)) \text{ if and only if } g(n)=\Theta(f(n)) $$ 
+
+\subsubsection{Transpose symmetry}
+\begin{alignat*}{3}
+	&f(n) &&= O(g(n)) \quad\text{if and only if}\quad  g(n) &&= \Omega(f(n))\\
+	&f(n) &&= o(g(n)) \quad\text{if and only if}\quad  g(n) &&= \omega(f(n))
+\end{alignat*}
+
+\subsection{The engineering way}
+Ignore its leading constants: $ T(n)=1000n^5 = \Theta(n^5) $.\\
+Drop its low order terms: $ T(n)=n^5+n^3+\lg n = \Theta(n^5) $\\
+\textbf{Identifying lower order terms}
+\[
+\begin{array}{ccccccc}
+	\text{Constant} &<& \text{Poly-logarithm} &<& \text{Polynomial} &<& \text{Exponential}\\
+	c &<& \lg^kn &<& n^a &<& b^n
+\end{array}
+\]

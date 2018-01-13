@@ -1,0 +1,53 @@
+\subsection{Dynamic set}
+A dynamic set is a grouping of values.
+A dynamic set implements some or all of the following operations specified on \textbf{page 230}.\\
+\begin{tabularx}{\linewidth}{Xlp{1.2cm}lll}
+	\toprule
+	                           & \textbf{Max} & \textbf{Extract-Max} & \textbf{Insert} & \textbf{Delete} & \textbf{Search} \\ \midrule
+	Heap                       & \c               & \lgn                 & \lgn            & \lgn            & \n              \\
+	Singly Linked List         & \n               & \n                   & \c              & \n              & \n              \\
+	Ordered singly linked list & \c               & \c                   & \n              & \n              & \n              \\
+	Doubly linked list         & \n               & \n                   & \c              & \c              & \n              \\
+	Ordered doubly linked list & \c               & \c                   & \n              & \c              & \n              \\
+	Hash table                 & \n               & \n                   & \c              & \c              & \c              \\ \bottomrule
+\end{tabularx}
+\subsection{Stack}
+\textit{CLRS section 10.1 page 232}\\
+A stack is a container of objects. Objects are inserted and removed according to the last-in-first-out (LIFO) principle.
+A stack has the following operations:
+\begin{description}
+	\item[Push($ S $, $ x $)] inserts an element $ x $ into the stack $ S $.
+	\item[Pop($ S $)] deletes the element on top of the stack $ S $. 
+	\item[Stack-Empty($ S $)] returns whether the stack is empty.
+\end{description}
+
+\subsection{Queue}
+\textit{CLRS section 10.1 page 234}\\
+A queue is a container of elements. Elements are inserted and removed according to the First-in-first-out (FIFO) principle.
+A queue has the following operations:
+\begin{description}
+	\item[Enqueue($ Q $, $ x $)] inserts an element $ x $ into the queue $ Q $.
+	\item[Dequeue($ Q $)] deletes the head element in the queue $ Q $, and returns is. 
+\end{description}
+
+\subsection{linked list}
+\textit{Linked lists} and \textit{doubly linked lists} supports all og the operations on \textbf{page 230}.
+
+\subsection{Priority Queue}
+A priority queue (PQ) is a data structure for maintaining a set $ A $ of elements, each with an associated value called key.
+A priority queue supports the following operations:
+\begin{description}
+	\item[Insert($ A $, $ x $)]  insert element $ x $ in set $ A (A=A\cup{x}) $.
+	\item[Maximum($ A $)] returns the element of $ A $ with the largest key.
+	\item[Extract-Max($ A $)] returns and removes the element of $ A $ with the
+	largest key from $ A $.
+\end{description}
+
+\subsection{Dictionary}
+Dictionaries store elements so that they can be located quickly using keys.
+A dictionary supports the following operations:
+\begin{description}
+	\item[Search($ S $, $ k $)] an access operation that returns a pointer $ x $ to an element where $ x.key = k $.
+	\item[Insert($ S $, $ x $)] a manipulation operation that adds element $ x $ to $ S $.
+	\item[Delete($ S $, $ x $)] a manipulation operation that removes element $ x $ from $ S $.
+\end{description}
