@@ -1,0 +1,35 @@
+\documentclass[10pt,a4paper,oneside,twocolumn]{article}
+\usepackage[latin1]{inputenc}
+%\usepackage{amsmath}
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{endnotes}
+
+\graphicspath{{figures/}}
+
+\setlistdepth{7}
+\renewlist{itemize}{itemize}{7}
+\setlist[itemize]{label=$\cdot$}
+\setlist[itemize,1]{label=\textbullet}
+\setlist[itemize,2]{label=--}
+\setlist[itemize,3]{label=*}
+\setlist[itemize,5]{label=-}
+
+
+\author{Simon Virenfeldt}
+\title{Design and Evaluation of User Interfaces - Reference}
+\date{2017\\September - January}
+
+\begin{document}
+    \maketitle
+	\section{Definitions}
+	\input{definitions.tex}
+	\section{PACT}
+	\input{pact.tex}
+	\section{Process}
+	\input{process.tex}
+\end{document}
