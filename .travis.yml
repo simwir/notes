@@ -5,5 +5,5 @@ before_install:
 script:
 - mkdir _build
 - pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build "Algorithms and Data Structures - Reference"/AD.tex
-deploy:
-  "curl --ftp-create-dirs -T "{_build/AD.pdf}" -u $FTP-USERNAME:$FTP-PASSWORD ftp://files.simwir.dk/notes/"
+after_success:
+  "curl --ftp-create-dirs -T '{_build/AD.pdf}' -u $FTP-USERNAME:$FTP-PASSWORD ftp://files.simwir.dk/notes/"
