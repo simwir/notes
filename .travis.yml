@@ -6,4 +6,4 @@ script:
 - cd "Algorithms and Data Structures - Reference"
 - pdflatex -interaction=nonstopmode -halt-on-error AD.tex
 after_success:
-  "curl --ftp-create-dirs -T '{"Algorithms and Data Structures - Reference"/AD.pdf}' -u $FTP-USERNAME:$FTP-PASSWORD ftp://files.simwir.dk/notes/"
+- curl --ftp-create-dirs -T '{"Algorithms and Data Structures - Reference"/AD.pdf}' -u $FTP-USERNAME:$FTP-PASSWORD ftp://files.simwir.dk/notes/
