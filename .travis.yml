@@ -10,4 +10,4 @@ script:
 - pdflatex -interaction=nonstopmode -halt-on-error DEB.tex
 - cd ..
 after_success:
-- curl --ftp-create-dirs -T '{Algorithms and Data Structures - Reference/AD.pdf,Design and Evaluation of User Interfaces- Reference/DEB.pdf}' -u $FTP_USERNAME:$FTP_PASSWORD ftp://files.simwir.dk/notes/$TRAVIS_BRANCH
+- curl --ftp-create-dirs -T '{Algorithms and Data Structures - Reference/AD.pdf,Design and Evaluation of User Interfaces- Reference/DEB.pdf}' -u $FTP_USERNAME:$FTP_PASSWORD ftp://files.simwir.dk/notes/$TRAVIS_BRANCH/
