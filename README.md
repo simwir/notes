@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/simwir/notes.svg?branch=master)](https://travis-ci.org/simwir/notes)
 # Downloads
-[Algorithms and Datastructures](http://files.simwir.dk/notes/AD.pdf)
+[Algorithms and Datastructures](http://files.simwir.dk/notes/master/AD.pdf)
+[Design and Evaluation of User Interfaces](http://files.simwir.dk/notes/master/DEB.pdf)
 
 # Readme
 This repository contains my notes from various courses, from studying Computer-Science.
