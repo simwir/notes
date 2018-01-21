@@ -5,8 +5,16 @@ before_install:
 script:
 - cd "Algorithms and Data Structures - Reference"
 - pdflatex -interaction=nonstopmode -halt-on-error AD.tex
+- pdflatex -interaction=nonstopmode -halt-on-error AD.tex
+- pdflatex -interaction=nonstopmode -halt-on-error AD.tex
+- pdflatex -interaction=nonstopmode -halt-on-error AD.tex
+- pdflatex -interaction=nonstopmode -halt-on-error AD.tex
 - cd ..
 - cd "Design and Evaluation of User Interfaces- Reference"
+- pdflatex -interaction=nonstopmode -halt-on-error DEB.tex
+- pdflatex -interaction=nonstopmode -halt-on-error DEB.tex
+- pdflatex -interaction=nonstopmode -halt-on-error DEB.tex
+- pdflatex -interaction=nonstopmode -halt-on-error DEB.tex
 - pdflatex -interaction=nonstopmode -halt-on-error DEB.tex
 - cd ..
 after_success:
