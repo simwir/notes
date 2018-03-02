@@ -3,17 +3,23 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{cancel}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning}
 \graphicspath{{figures/}}
 \author{Simon Virenfeldt}
 \title{Syntaks og semantik}
 \date{2018\\Januar - juni}
+\newtheorem*{skov}{Skov Sætning}
+\newtheorem{definition}{Definition}
 \begin{document}
     \maketitle
-    \section{Termonologi}
+    \section{Terminologi}
     \input{termonologi.tex}
-    \xcancel{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec sapien pretium, porttitor urna eu, mollis ligula. Nunc et urna purus. Nullam mattis, nisi non efficitur dapibus, libero lacus pretium erat, et laoreet orci eros vitae mi. Proin eros ante, luctus eget nibh non, egestas scelerisque est. Integer condimentum, neque ullamcorper mollis dictum, massa metus luctus ipsum, at accumsan velit elit in urna. Mauris eu libero luctus, volutpat ante vitae, convallis velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc maximus enim et ultrices viverra. Quisque vel placerat est, at mollis nibh. Etiam vitae metus mi. Aliquam elementum lacus sodales ligula pulvinar scelerisque. Nulla vitae auctor ex. Duis feugiat imperdiet ullamcorper. Sed facilisis sagittis lacus, imperdiet rutrum nisi aliquet cursus. Fusce euismod eros at consequat iaculis. Sed semper leo sit amet eleifend venenatis. }
+    \section{Endelige automater og regulære sprog}
+    \input{dfa.tex}
 \end{document}

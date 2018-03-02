@@ -1,0 +1,43 @@
+\begin{itemize}
+	\item Sprog $ \neq $ Strenge $ \neq $ alfabet
+\end{itemize}
+\begin{skov}
+	$ \epsilon \in L $ Altid
+\end{skov}
+\begin{proof}
+	$ \epsilon \notin \{ab, abc\} $
+\end{proof}
+Men for ethvert $ L $ gælder $ \epsilon \in L^* $.
+\begin{skov}
+	Konkatenation af sprog $ \approx $ krydsprodukt.
+\end{skov}
+\begin{proof}
+	\begin{definition}
+		$ L_1 \cdot L_2 = \{w | w = uv, u \in L_1, v\in L_2 \} $
+	\end{definition}
+	\begin{definition}
+		$ L_1 \times L_2 = \{ (u,v) | u\in L_1, v \in L_2 \}  $
+	\end{definition}
+\end{proof}
+\begin{skov}
+	Der findes kun én DFA i hele verden.
+	For et sprog $ L $ er der her en automat som genkender $ L $.\\
+	$ A_{alt} $:
+	\begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto]
+		\node[state,initial,accepting] (q_0) {}; 
+		\path[->] (q_0) edge [loop above] node {a} ();
+	\end{tikzpicture}
+	~ For alle $ a \in \Sigma $
+\end{skov}
+\begin{proof}
+	$ A $ genkender $ L \Leftrightarrow A $ accepterer $ w $ når og kun når $ w\in L $
+\end{proof}
+\begin{skov}
+	Alle sprog er endelige. 
+\end{skov}
+\begin{proof}
+	\begin{align*}
+	L_2 &= \{ \epsilon, a, aa, aaa, \ldots \}\\
+	&= \{ a^k | k \geq 0 \}~(a^k = \underbrace{a \cdots a}_{k \text{ gange}})
+	\end{align*}
+\end{proof}
