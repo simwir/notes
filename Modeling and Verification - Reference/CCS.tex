@@ -1,0 +1,44 @@
+\begin{definition}~
+	\begin{itemize}
+		\item $ \mathbb{A} $ is the set of \emph{names}
+		\item $ \overline{\mathbb{A}} = \left\lbrace\overline{a}\middle\vert a\in\mathbb{A}\right\rbrace $ is the set of \emph{co-names}
+		\item $ \mathbb{L}=\mathbb{A}\cup\overline{\mathbb{A}} $ is the set of \emph{labels}
+		\item $ \act = \mathbb{L}\cup\{\tau\} $ is the set of \emph{actions}, where $ \tau $ is the \emph{internal}(or \emph{silent}) action
+		\item $ \overline{\overline{a}} = a $
+		\item A function $ f:\act\rightarrow\act $ is a \emph{relabelling function} if $ f(\tau)=\tau $ and $ f(\overline{a}) = \overline{f(a)} $
+		\item $ \mathcal{P} $ is the set of all CCS expressions
+		\item $ \mathbb{K} $ is the set of all constants
+	\end{itemize}
+\end{definition}
+\subsection*{Syntax of CCS expressions}
+\begin{align*}
+P:=&K&\text{constant} (K\in\mathbb{K})\\
+&\alpha.P&\text{prefixing}(\alpha\in\act)\\
+&\sum_{i\in I}P_i&\text{summation}\\
+&P\vert Q&\text{parallel composition}\\
+&P\backslash L&\text{restriction}(L\subseteq \mathbb{A})\\
+&P[f]&\text{relabelling}(f:\act\rightarrow\act)
+\end{align*}
+\subsection*{Notation}
+\begin{itemize}
+	\item $ P_1+P_2=\sum_{i\in\{1,2\}}P_i $
+	\item $ 0 = \sum_{i\in\emptyset}P_i $
+\end{itemize}
+\subsection*{Precedence of operators}
+\begin{enumerate}
+	\item Restriction and relabelling
+	\item Action prefixing
+	\item parallel composition
+	\item summation
+\end{enumerate}
+\subsection*{SOS Rules for CCS}
+\begin{align*}
+&(ACT)\dfrac{}{\alpha.P\xrightarrow{\alpha}P}
+&(SUM_j)\dfrac{P_j\xrightarrow{\alpha}P_j'}{\sum_{i\in I}P_i\xrightarrow{\alpha}P_j'}\text{where } j\in I\\
+&(COM1)\dfrac{P\xrightarrow{\alpha}P'}{P\vert Q\xrightarrow{\alpha}P'\vert Q}
+&(COM2)\dfrac{Q\xrightarrow{\alpha}Q'}{P\vert Q\xrightarrow{\alpha}P\vert Q'}\\
+&(COM3)\dfrac{P\xrightarrow{a}P'~~Q\xrightarrow{\overline{a}}Q'}{P\vert Q\xrightarrow{\tau}P'\vert Q'}
+&(RES)\dfrac{P\xrightarrow{\alpha}P'}{P\backslash L\xrightarrow{\alpha}P'\backslash L}\text{where } a,\overline{a}\notin L\\
+&(REL)\dfrac{P\xrightarrow{\alpha}P'}{P[f]\xrightarrow{f(\alpha)}P'[f]}
+&(CON)\dfrac{P\xrightarrow{\alpha}P'}{K\xrightarrow{\alpha}P'}\text{where }K\definedby P
+\end{align*}

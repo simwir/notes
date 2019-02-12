@@ -1,0 +1,20 @@
+\begin{definition}[Labelled Transistion System]
+	A \emph{Labelled Transition System (LTS)} is a tuple
+	\[
+		\left(\proc,\act,\left\lbrace\xrightarrow{\alpha} \middle\vert \alpha\in\act\right\rbrace\right)
+	\]
+	where $ \proc $ is a set of states, $ \act $ is a set of actions, for each $ \alpha\in\act $, $ \xrightarrow{\alpha} \subseteq \proc\times\proc $ is a binary relation called \emph{transition relation}.
+\end{definition}
+\subsection*{Notation}
+We can extend $ \xrightarrow{\alpha} $ from labels $ \alpha\in\act $ to words $ w\in\act^* $
+\begin{itemize}
+	\item $ p\xrightarrow{\varepsilon}p $, for every $ p\in\proc $
+	\item $ p\xrightarrow{\alpha w}p' $, if there is $ p''\in\proc $, such that $ p\xrightarrow{\alpha}p'' $ and $ p''\xrightarrow{w}p' $ for every $ p,p'\in\proc $, $ \alpha\in\act $, and $ w\in\act^* $.
+\end{itemize}
+Other notation
+\begin{itemize}
+	\item $ \rightarrow = \left\lbrace(p,p')\middle\vert \text{ if } p\xrightarrow{\alpha}p'\text{, for some } \alpha\in\act\right\rbrace$
+	\item $ \rightarrow^* $ is the \emph{reflexive} and \emph{transitive} closure of $ \rightarrow $
+	\item $ p\xrightarrow{\alpha} $~~ if there exist $ p'\in\proc $ such that $ p\xrightarrow{\alpha}p' $
+	\item $ p\cancel{\xrightarrow{\alpha}} $~~ if there is no $ p'\in\proc $ such that $ p\xrightarrow{\alpha}p' $
+\end{itemize}

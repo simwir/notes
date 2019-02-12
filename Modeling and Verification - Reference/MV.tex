@@ -1,0 +1,28 @@
+\documentclass[10pt,a4paper,oneside]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{amsthm}
+\usepackage{cancel}
+\graphicspath{{figures/}}
+
+\input{macros.tex}
+
+\newtheorem*{definition}{Definition}
+
+\author{Simon Virenfeldt}
+\title{Modeling and Verification - Reference}
+\date{2019\\January - June}
+\begin{document}
+    \maketitle
+    \section{Relations}
+    \input{closures.tex}
+    \section{Labelled Transition Systems}
+    \input{LTS.tex}
+    \section{Calculus of Communicating Systems}
+    \input{CCS.tex}
+\end{document}

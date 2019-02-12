@@ -1,0 +1,17 @@
+\begin{definition}[Reflexive]
+	A relation $ R $ is \emph{reflexive} over a set $ X $ if $ \forall x \in X : xRx $
+\end{definition}
+\begin{definition}[Symmetric]
+	A relation $ R $ is \emph{symmetric} over a set $ X $ if $ \forall x,y\in X : xRy \iff yRx $
+\end{definition}
+\begin{definition}[Transitive]
+	A relation $ R $ is \emph{transitive} over a set $ X $ if $ \forall x,y,z\in X : (xRy \land yRz) \implies xRz $
+\end{definition}
+\begin{definition}[Closure]
+	$ R' $ is the $ X $ closure of $ R $ if and only if
+	\begin{itemize}
+		\item $ R\subseteq R' $
+		\item $ R' $ is $ X $
+		\item $ R' $ is the \emph{smallest} relation satisfying the two conditions above, i.e., for any relation $ R'' $, if $ R\subseteq R'' $ and $ R'' $ is $ X $, then $ R'\subseteq R'' $
+	\end{itemize}
+\end{definition}
